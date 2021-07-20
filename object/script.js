@@ -50,3 +50,18 @@ var car3 = new Object();
 //Create new object by constructor
 var car4 = new Car('ford' , 'mustang' , 1969);
 var car5 = new Car('Saipa' , '111' , 1800 );
+
+//Object Inheritance
+//create object not extends from Object
+var car6 = Object.create(null);
+car6.makeASmile = function() {
+    console.log(':)')
+}
+
+car6.makeASmile();
+
+
+//create object extends from car4 object
+var car7 = Object.create(car4);
+car7.color = 'Yellow';
+car7.year = 2010;
