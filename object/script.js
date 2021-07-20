@@ -26,6 +26,16 @@ var car = {
     }
 }
 
+function Car(make, model , year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+
+    this.run = function() {
+        return 'speed up to 200';
+    }
+}
+
 
 //Use Car Variable
 console.log(car.model);
@@ -33,8 +43,10 @@ console.log(car.model);
 console.log(car["year"]);
 
 //Create new object
-var car_2 = Object.create();
+var car2 = Object.create();
 
-var car_3 = new Object();
+var car3 = new Object();
 
-
+//Create new object by constructor
+var car4 = new Car('ford' , 'mustang' , 1969);
+var car5 = new Car('Saipa' , '111' , 1800 );
