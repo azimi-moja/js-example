@@ -23,6 +23,11 @@ var car = {
         + 'Model= ' + this.model 
         + ', Year =' + this.year 
         + ', Details = { Color = ' + this.details.color + ', Cylinders' + this.details.cylinders + '}';
+    },
+
+    displayDetails : function(year , name) {
+        console.log(year , name)
+        console.log('Maker : ' + this.make + ' , Model : ' + this.model)
     }
 }
 
@@ -65,3 +70,18 @@ car6.makeASmile();
 var car7 = Object.create(car4);
 car7.color = 'Yellow';
 car7.year = 2010;
+
+//use function in object by call - apply - bind 
+var car8 = {
+    make : 'sipa',
+    model : 'tiba2',
+}
+
+//apply
+car.displayDetails.apply(car8, [2012 , 'hesam'])
+
+//call
+car.displayDetails.call(car8, 2012 , 'hesam')
+
+//bind
+car.displayDetails.bind(car8, 2012 , 'hesam')
