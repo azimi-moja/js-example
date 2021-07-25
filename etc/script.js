@@ -49,7 +49,7 @@ console.log(a , b , c);
 let obj = {
     name : 'Moja',
     age : 20,
-    show = () => {return "Moja"};
+    show : () => "Moja"
 }
 
 //for rename use ( : )
@@ -57,3 +57,13 @@ let obj = {
 let { age = 20 , foo : bar = () => { return 'ahmad'} , name : firstname } = obj;
 
 console.log(firstname , age , bar());
+
+
+//Template String
+let str = `hello!!! this is test
+name : ${obj.name}, 
+age : ${obj.age},
+show() : ${obj.show()}  
+the end`;
+
+console.log(str);
