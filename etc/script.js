@@ -27,3 +27,33 @@ let forOfList = [1, 2, 3, 4];
 for(let i of forOfList){
     console.log("i = " + i);
 }
+
+//Array Destructuring
+let arrayList = [1, 'hamid' , 'ali' , false , 2];
+
+let [item1, , ,item2 ,item3] = arrayList;
+
+console.log(item1 ,item2 ,item3);
+
+function foo() {
+    return [22, 33, 44, 55 ,66 ,77 ,88];
+}
+
+let [a , b, ...c] = foo();
+
+console.log(a , b , c);
+
+
+
+//Object Destructuring
+let obj = {
+    name : 'Moja',
+    age : 20,
+    show = () => {return "Moja"};
+}
+
+//for rename use ( : )
+//for defualt parameter use ( = )
+let { age = 20 , foo : bar = () => { return 'ahmad'} , name : firstname } = obj;
+
+console.log(firstname , age , bar());
