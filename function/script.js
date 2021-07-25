@@ -67,22 +67,22 @@ let obj = {
 obj.b();
 obj.c();
 
-//use old defualt parameter
-function oldDefualtSum(a , b) {
+//use old default parameter
+function oldDefaultSum(a , b) {
     a = a || 1;
     b = b || 1;
     console.log("a + b = " + (a + b));
 }
 
-oldDefualtSum(18, 27);
+oldDefaultSum(18, 27);
 
-//use defualt parameter
-function defualtSum(a  = 1, b = 1) {
+//use default parameter
+function defaultSum(a  = 1, b = 1) {
     console.log("a + b = " + (a + b));
 }
 
-defualtSum(42, 16);
-defualtSum();
+defaultSum(42, 16);
+defaultSum();
 
 
 //user rest argument
