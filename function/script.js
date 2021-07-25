@@ -57,12 +57,40 @@ checkNumber(6);
 let obj = {
     a : 10,
     b : function() {
-        console.log(this.a , this)
+        console.log(this.a , this);
     },
     c : () => {
-        console.log(this.a , this)
+        console.log(this.a , this);
     }
 }
 
-obj.b()
-obj.c()
+obj.b();
+obj.c();
+
+//use old defualt parameter
+function oldDefualtSum(a , b) {
+    a = a || 1;
+    b = b || 1;
+    console.log("a + b = " + (a + b));
+}
+
+oldDefualtSum(18, 27);
+
+//use defualt parameter
+function defualtSum(a  = 1, b = 1) {
+    console.log("a + b = " + (a + b));
+}
+
+defualtSum(42, 16);
+defualtSum();
+
+
+//user rest argument
+function restSum(a , b ,...args) {
+    console.log(a , b);
+    return args.reduce((pre , current ) => {
+        return pre + current;
+    });
+}
+
+console.log(restSum(1,2,3,4,5,5,4,8,10,200));
